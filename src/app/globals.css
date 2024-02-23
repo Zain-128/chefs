@@ -15,15 +15,32 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+.react-multiple-carousel__arrow {
+  background-color: #ff9e2c !important;
+}
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background: white;
+  /* overflow-x: hidden; */
+}
+.react-multi-carousel-item {
+  visibility: hidden !important;
+}
+
+.react-multi-carousel-item--active {
+  opacity: 1 !important;
+
+  visibility: visible !important;
+}
+.custom-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.custom-scrollbar {
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  overflow-x: auto; /* Enable horizontal scrolling */
 }
 
 @layer utilities {
